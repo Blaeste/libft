@@ -6,7 +6,7 @@ Objectifs:
 - Mimic des fonctions de la Libc
 - Faire quelques fonctions custom
 - Generer une librairie statique custom
-- Bonus : Manipulation des listes chainés
+- Bonus : Manipulation de listes
 
 Skills:
 - Norme 42 et rigueur
