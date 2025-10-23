@@ -6,7 +6,7 @@
 /*   By: eschwart <eschwart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:45:12 by eschwart          #+#    #+#             */
-/*   Updated: 2024/10/21 14:30:16 by eschwart         ###   ########.fr       */
+/*   Updated: 2025/10/23 11:10:08 by eschwart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,28 @@ static size_t	ft_count_dig(long n)
 
 static void	ft_fill_rslt(char *result, long nb, size_t len)
 {
+	size_t	i;
+
 	if (nb < 0)
 	{
 		result[0] = '-';
 		nb *= -1;
+		i = len - 1;
+		while (i > 0)
+		{
+			result[i] = (nb % 10) + '0';
+			nb /= 10;
+			i--;
+		}
 	}
-	while (len-- > 0 && result[len] != '-')
+	else
 	{
-		result[len] = (nb % 10) + '0';
-		nb /= 10;
+		i = len;
+		while (i-- > 0)
+		{
+			result[i] = (nb % 10) + '0';
+			nb /= 10;
+		}
 	}
 }
 
