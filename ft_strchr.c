@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eschwart <eschwart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 15:22:53 by eschwart          #+#    #+#             */
-/*   Updated: 2025/10/27 10:04:57 by eschwart         ###   ########.fr       */
+/*   Created: 2025/11/06 10:05:35 by eschwart          #+#    #+#             */
+/*   Updated: 2025/11/06 10:09:15 by eschwart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	tofind;
+	unsigned char	tofind;
 
-	tofind = (char)c;
+	tofind = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == tofind)
+		if ((unsigned char)*s == tofind)
 			return ((char *)s);
 		s++;
 	}
